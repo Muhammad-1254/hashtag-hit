@@ -59,7 +59,7 @@ const Cards = ({apis,cardType}:any) => {
         bg-gradient-to-r from-customBlack via-dark to-customBlack
          border-l border-r border-b-4 rounded shadow shadow-cyanDark border-cyanDark">
           <div key={api[0]?._id} className=' '>
-            <Link href={`{/post/${api[0]?.slug.current}}`}>
+            <Link href={`{/post/${api[0]?.slug.current}`}>
             <Img imageData={api[0]?.mainImage.asset} alt="img" 
             className='w-full object-cover rounded mb-2 h-[400px] md:h-[500px]'
             height={400} width={400}priority={false} quality={75} key={api[0]?._id}

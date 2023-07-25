@@ -14,7 +14,7 @@ import {
 
 import {  getCategoriesPost } from '@/app/services';
 
-export const revalidate = 3600
+export const revalidate = 7200
 export default async function Home() {
 
   const data:any = await getCategoriesPost()

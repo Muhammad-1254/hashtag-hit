@@ -4,7 +4,7 @@ import { Category } from '@/app/components';
 import { getCategoryPage } from '@/app/services';
 
 
-export const revalidate = 3600
+export const revalidate = 7200
 export async function generateStaticParams(){
   const ids = await client.fetch(`*[_type == 'category']{_id}`)
   const idRoutes = ids.map((id:any)=> id._id)

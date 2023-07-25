@@ -8,7 +8,7 @@ import { client } from '@/app/sanity/lib/client';
 
 
 
-export const revalidate = 3600
+export const revalidate = 7200
 export async function generateStaticParams(){
   const slugs = await client.fetch(`*[_type == 'post']{slug}`)
   const slugRoutes = slugs.map((slug:any)=> slug.slug.current)

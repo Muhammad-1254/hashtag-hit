@@ -12,7 +12,7 @@ import { client } from '../../sanity/lib/client';
   
     
           return (
-            <div className="relative w-[80vw]  md:w-[30vw]  m-10 mx-auto">
+            <div className="relative w-[50vw]  md:w-[30vw]  m-10 mx-auto">
               
            
               <Image 

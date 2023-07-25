@@ -104,19 +104,25 @@ const {scrollYProgress} = useScroll();
         <h1  className='cursor-pointer text-2xl font-Raleway font-semibold text-cyanLight'>
           <Link href={'/'}>HashtagHit</Link>
         </h1>
-              <nav >
+              <nav  className=''>
                 <div className='text-3xl  text-cyanLight' 
                 onClick={() =>setNav(!nav)}>
                   {nav ? <AiOutlineMenuFold />: <AiOutlineMenuUnfold/>}
                 </div>
-                <ul className={`absolute z-50 flex flex-col items-start justify-normal  left-0 top-16
-                 bg-gradient-to-r from-dark/40 via-dark/25 to-dark/10 w-full h-screen pt-6 overflow-auto duration-[250ms] gap-y-6 
+                <div onClick={() => setNav(false)} 
+                className={`${nav ? "max-w-full":"max-w-0"}  absolute w-screen h-screen top-20 right-0 left-0 bottom-0
+                 bg-white/0 -z-10 duration-[250ms]`} />
+                <ul className={`absolute -z-10 flex flex-col items-start justify-normal  left-0 top-0
+                 bg-gradient-to-r from-customBlack via-dark to-customBlack rounded-br-full 
+                  w-[280px] md:[w-350px] h-screen md:max-h-screen
+                   pt-6 overflow-auto duration-[250ms] gap-y-6 
+                   
                   ${nav ? "max-w-[100vw]": "max-w-0 "}`}>
-
-                  {nav && categories?.map(({_id,title,slug})=>(
+                  {nav && categories?.map(({_id,title,slug},id)=>(
                     <li onClick={() => setNav(!nav)}
-                     key={_id} className={`text-xl  mt-1 mx-auto  font-medium bg-gradient-to-l from-black text-cyanDark  to-customBlack   px-5 py-[2px] backdrop-blur-xl rounded-full `}>
-                      <Link href={`${'/category/'+slug.current+'/'+_id}`}>
+                     key={_id} className={`${id  == 0 ? "mt-20":"mt-1"} pl-5 text-xl capitalize font-medium  text-cyanLight/95   `}>
+                      <Link className=' pl-3 border-l-[3px] border-cyanDark/90 '
+                       href={`${'/category/'+slug.current+'/'+_id}`}>
                         {title}
                       </Link>
                     </li>

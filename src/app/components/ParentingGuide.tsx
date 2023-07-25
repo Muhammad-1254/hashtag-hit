@@ -28,14 +28,14 @@ className='w-[100%] mx-auto
   Parenting Guide
     </p>
 </div>
-      <motion.div 
-      initial="hidden" whileInView="visible" 
-      viewport={{once:true}} 
-      transition={{duration:0.4,type:"tween",ease:'easeIn'}}
-      variants={{
-        visible:{y:0, opacity:1,scale:1},
-        hidden:{y:"100%",opacity:0,scale:0.8}
-      }}
+      <div 
+      // initial="hidden" whileInView="visible" 
+      // viewport={{once:true}} 
+      // transition={{duration:0.4,type:"tween",ease:'easeIn'}}
+      // variants={{
+      //   visible:{y:0, opacity:1,scale:1},
+      //   hidden:{y:"100%",opacity:0,scale:0.8}
+      // }}
       className='grid grid-cols-1 lg:grid-cols-2   gap-x-10 items-center justify-center lg:justify-evenly   max-w-screen-sm md:max-w-screen-xl mx-auto
       mt-10 md:mt-14'>
         <div className='group w-[95&]  mb-10 md:mb-16 relative lg:-ml-10  md:duration-200 md:hover:text-white
@@ -67,7 +67,15 @@ className='w-[100%] mx-auto
         </div>
         
         
-        <div className='grid grid-cols-1 lg:grid-cols-2  flex-1 w-full h-full 
+        <motion.div
+         initial="hidden" whileInView="visible" 
+      viewport={{once:true}} 
+      transition={{duration:0.4,type:"tween",ease:'easeIn'}}
+      variants={{
+        visible:{y:0, opacity:1,scale:1},
+        hidden:{y:"100%",opacity:0,scale:0.8}
+      }}
+        className='grid grid-cols-1 lg:grid-cols-2  flex-1 w-full h-full 
         p-4 pt-0 gap-4'>
           {api?.filter((item,id) => id !== 0 && id < 6).map(({_id,title,mainImage,slug,publishedAt})=>(
           <Link key={_id} href={`/post/${slug.current}`}>
@@ -92,9 +100,9 @@ className='w-[100%] mx-auto
           ))}
           
           
-        </div>
+        </motion.div>
 
-      </motion.div>
+      </div>
      
       </div>
 

@@ -48,7 +48,7 @@ const Footer = () => {
               waiting to be unraveled. We are passionate explorers,
               storytellers, and seekers of the extraordinary. Our blog is a
               digital sanctuary, a place where you can escape the ordinary and
-              immerse yourself in the captivating realms of travel, cultur, and
+              Immerse yourself in the captivating realms of travel, culture, and
               discovery.
             </p>
             <p className="text-ellipsis text-sm md:mx-10 lg:mx-0 pb-4">
@@ -70,7 +70,7 @@ const Footer = () => {
                 className="text-cyanDark text-ellipsis px-4 md:hover:animate-pulse
                md:hover:scale-105"
               >
-                Susbscribe
+                Subscribe
               </button>
             </div>
             <div className="flex   items-center gap-x-5 md:gap-x-20 lg:gap-x-5 ">
@@ -97,7 +97,7 @@ const Footer = () => {
             <div className="md:max-w-[60%]  text-start">
               <p>
                 So, welcome aboard. Get ready to dive deep into the wonders of
-                our world, ignite your wanderlust, and uncover the magic that
+                our world, ignite your wanderlust and uncover the magic that
                 lies just beyond the horizon. The adventure begins now.
               </p>
             </div>
